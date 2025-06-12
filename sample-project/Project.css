@@ -1,0 +1,699 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+  font-family: Arial, sans-serif;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+:root {
+  --heading-font: "Raleway", sans-serif;
+}
+
+/* Add the overlay using a pseudo-element */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(6, 7, 18, 0.7);
+  /* black with 0.6 opacity */
+  z-index: 0;
+}
+
+/* Ensure content appears above the overlay */
+.hero-content,
+.navbar {
+  position: relative;
+  z-index: 1;
+}
+
+
+.hero-section {
+  height: 100vh;
+  background: url('https://themewagon.github.io/Dewi/assets/img/hero-bg.jpg') center/cover no-repeat;
+  position: relative;
+  color: rgb(255, 255, 255);
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  z-index: 1000;
+  transition: background-color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: rgba(6, 32, 43, 0.7);
+}
+
+.nav-links {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.logo {
+  font-size: 27px;
+  font-weight: bolder;
+}
+
+/* .start-btn {
+  padding: 3px 8px;
+  border: 2px solid white;
+  background: transparent;
+  color: rgb(251, 251, 251) !important;
+  font-size: 14px;
+} 
+.start-btn:hover{
+  background-color: #ff4a17 !important;
+  border: 2px solid #ff4a17 !important;
+  outline: none;
+}*/
+
+/* nav bar end */
+
+/* main view port start */
+.header-head {
+  font-weight: 700;
+  font-size: 42px;
+}
+
+.hero-content .header-para {
+  font-size: 21px;
+}
+
+@media (max-width: 768px) {
+  .header-head {
+    font-size: 28px !important;
+  }
+
+  .hero-content .header-para {
+    font-size: 16px !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px;
+  /* fo */
+}
+
+
+.btn.primary {
+  height: 35px;
+  font-size: 13px;
+  background-color: #ff4a17;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.btn.primary:hover {
+  background-color: rgb(255, 98, 0, 0.7);
+  transition: 0.5s ease;
+}
+
+.btn.secondary {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.btn.secondary:hover {
+  color: #ff4a17;
+  transition: 0.5s ease;
+}
+
+.spl-1 {
+  font-size: 14px;
+  width: 30px;
+  height: 30px;
+  border: 3px solid #ff4a17;
+  border-radius: 50%;
+  color: #ff4a17;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* header section end */
+
+
+/* content start */
+
+.header-1 {
+  color: rgb(67, 66, 66);
+  font-weight: 600;
+  font-family: var(--heading-font);
+}
+
+.para {
+  font-size: 14px;
+  color: rgb(84, 84, 84);
+}
+
+.para-style {
+  font-style: italic;
+  color: rgb(151, 151, 151);
+}
+
+.img-space {
+  margin-top: 10px;
+}
+
+.img {
+  border-radius: 3%;
+}
+
+
+.list-1 {
+  list-style: none;
+  padding-left: 0px;
+
+}
+
+.list-1 li {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 30px;
+
+}
+
+.list-1 li::before {
+  content: '';
+  /* Create a custom bullet */
+  position: absolute;
+  left: 0;
+  top: 0%;
+  width: 18px;
+  height: 18px;
+  background-color: rgb(255, 72, 0);
+  border-radius: 50%;
+  /* Make it a circle */
+
+}
+
+/* second block */
+.content-2-container {
+  background-color: rgb(242, 247, 252);
+}
+
+.des-1 {
+  font-size: 13px;
+
+}
+
+.img-bg-1 {
+  background: url("files/smile.png");
+  background-position: 30px;
+  padding-left: 85px;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+  ;
+}
+
+.img-bg-2 {
+  background: url("files/checklist.png");
+  background-position: 30px;
+  padding-left: 85px;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+  background-position: cover;
+}
+
+.img-bg-3 {
+  background: url("files/headset-with-microphone.png");
+  background-position: 30px;
+  padding-left: 85px;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+  background-position: cover;
+}
+
+.img-bg-4 {
+  background: url("files/users.png");
+  background-position: 30px;
+  padding-left: 85px;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+  background-position: cover;
+}
+
+
+/* .container,
+.content-2-container .container {
+  max-width: 1140px;
+} */
+
+.img,
+.img-bg-1,
+.img-bg-2,
+.img-bg-3,
+.img-bg-4,
+.img-1 {
+  width: 100%;
+}
+
+/* content-3 */
+
+.heading-line {
+  display: flex;
+  align-items: center;
+}
+
+.heading-line h2 {
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #999;
+  margin: 0;
+  /* line-height: 1; */
+}
+
+.heading-line .line {
+  width: 110px;
+  height: 0.5px;
+  background-color: #ff5722;
+  margin-left: 10px;
+}
+.header-2{
+  font-weight: 800;
+  color: #223C4C;
+  font-size: 32px;
+  font-family: Helvetica;
+}
+
+
+
+.card-hover {
+  padding-bottom: 30%;   
+  position: relative;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-icon {
+  width: 70px;
+  height: 70px;
+  background-color: #ff6347;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top:-15%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 0.3s ease;
+  z-index: 2;
+}
+.card-hover:hover .circle-icon {
+  transform: translateX(-50%) scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.card-body-custom {
+  margin-top: -100px;
+  padding: 10px 20px;
+  text-align: center;
+  background: rgb(255, 255, 255,0.9);
+  border-radius: 12px;
+  position: absolute;
+  top:70%;
+  
+  width: 75%;
+}
+.card-img-top {
+  border-radius:20px;
+}
+.custom-card-container {
+  max-width: 100%;
+  margin: auto;
+}
+
+
+/* content-4 */
+.img-2{
+  width: 50%;
+}
+.image-container  .img-2 {
+  filter: grayscale(100%); /* Turn off color */
+  transition: filter 0.5s ease; /* Smooth transition */
+}
+.image-container  .img-2:hover {
+  filter: grayscale(0%); /* Restore color on hover */
+}
+
+
+
+
+/* cotnent-5 */
+
+.clickable-box {
+  cursor: pointer;
+  padding: 20px;
+  border: 1px solid rgb(199, 197, 197);
+  transition: background-color 0.2s;
+}
+.clickable-box:hover {
+  background-color: #f0f0f0;
+  color: #ff5722;
+}
+.active-box {
+  background-color: #ff5722;
+  color: white;
+}
+.para-2{
+  font-style: italic;
+  color: rgb(84, 84, 84);
+}
+
+
+/* content-6 */
+.hover-effect{
+  border: 1px solid white;
+}
+.hover-effect:hover{
+  border: 1px solid orangered;
+  transition: 0.8s ease;
+  cursor: pointer;
+  
+}
+.hover-effect:hover .header-1{
+  color: orangered;
+  transition: 0.2s ease;
+}
+.header-2 {
+  color: rgb(67, 66, 66);
+  font-weight: 400;
+  font-family: var(--heading-font);
+  font-size: 8;
+}
+.para-3 {
+  font-size: 12px;
+  color: rgb(84, 84, 84);
+}
+
+
+/* content-7 */
+.carousel-bg {
+      background-image: url('https://themewagon.github.io/Dewi/assets/img/testimonials-bg.jpg'); /* Replace with your image */
+      background-size: cover;
+      background-position: center;
+      height: 75vh;
+      position: relative;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .overlay {
+      background: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+    }
+    .testimonial {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      margin: auto;
+      text-align: center;
+    }
+    .testimonial img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      margin-bottom: 15px;
+    }
+    .testimonial h5 {
+      font-weight: 700;
+    }
+    .testimonial .role {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+    .testimonial i.bi-quote {
+      font-size: 2rem;
+      opacity: 0.6;
+    }
+    .carousel-indicators [data-bs-target] {
+      background-color: rgb(255, 255, 255);
+    }
+
+
+
+
+
+/* last part */
+body {
+  font-family: Arial, sans-serif;
+}
+.team-section{
+    background-color: #f4f7fd;
+}
+
+.main-heading {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.main-heading h2 {
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #999;
+  margin: 0;
+  font-weight: bold;
+}
+
+.main-heading .line {
+  width: 110px;
+  height: 0.5px;
+  background-color: #ff5722; 
+  margin-left: 10px;
+} 
+
+.team-member .card-body {
+  background: white;
+}
+
+.card-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  color: gray;
+  font-size: 0.9rem;
+}
+
+.red-line {
+  width: 70px;
+  height: 2px;
+  background-color: red;
+  margin-top: 2px;
+}
+
+.team-member {
+  border: none;
+  background-color: transparent;
+  position: relative;
+  margin-bottom: 60px; /* give space for pop-out effect */
+}
+.team-member img {
+  width: 100%;
+}
+
+.card-img-top {
+  height: 280px;
+  object-fit: cover;
+  width: 100%;
+  display: block;
+}
+
+.pop-out {
+  position: absolute;
+  top:87%; /* adjust based on image height */
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding:18px 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+  width: 90%;
+}
+
+.custom-line {
+  width: 50px;
+  height: 1px;
+  background-color: darkgray; /* or a theme color */
+}
+.role{
+  color: grey;
+  font-style: italic;
+  font-size: 15px;
+}
+
+.social a {
+  color: grey; /* or your theme color */
+  margin-left: 8px;
+  font-size: 1.1rem;
+  transition: color 0.2s ease;
+}
+
+.social a:hover {
+  color:#ff4a17; /* Bootstrap primary on hover */
+}
+
+::placeholder {
+  color: grey; /* or #6c757d for Bootstrap's default muted color */
+  opacity: 1; /* Ensure it's fully visible */
+}
+
+.icon-circle {
+  border: 2px dotted red;         /* Dotted red border */
+  border-radius: 50%;             /* Makes it a circle */
+  padding: 10px;                  /* Space around the icon */
+  display: inline-flex;           /* Inline and center icon */
+  align-items: center;
+  justify-content: center;
+  width: 60px;                    /* Size of the circle */
+  height: 60px;
+}
+
+.contact p ,.contact h3{
+  color: gray;
+}
+
+.form-control{
+  border-radius: 0;
+  color: grey;
+}
+
+.form-control::placeholder {
+  color: grey;                   /* Makes placeholder text grey */
+  opacity: 1;                    /* Ensure it’s visible in all browsers */
+}
+
+.custom-submit-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 999px; /* Full pill shape */
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.custom-submit-btn:hover {
+  background-color: rgb(219, 57, 57); /* Optional hover effect */
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: black;         /* default background */
+  color: rgb(199, 198, 198);                    /* default icon color */
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: black;       /* your custom hover color */
+  color: #d40606;
+  border: 1px solid #d40606;
+}
+
+.address {
+  color: rgb(199, 199, 199); /* Light grey color */
+}
+
+.footer-links li a {
+  color: rgb(199, 199, 199);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links li a i {
+  color: #d40606; /* Red icon */
+  margin-right: 6px;
+  transition: color 0.3s ease;
+}
+
+.footer-links li a:hover {
+  color: #d40606; /* Optional: grey text becomes red on hover */
+}
+
+.footer-links li a:hover i {
+  color: #d40606; /* Keep icon red */
+}
+
+.custom-input {
+  flex: 1 1 auto;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #ced4da;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.custom-input::placeholder {
+  color: #ccc;
+}
+
+/* Style when the input is focused */
+.custom-input:focus {
+  background-color: #000;
+  color: #fff;
+  border-color: red;
+  box-shadow: none; /* removes default Bootstrap glow */
+  outline: none; /* removes default outline */
+}
